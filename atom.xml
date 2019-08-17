@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hi,GouKang</title>
+  <title>Hi,GouKan</title>
   
   <subtitle>学习弯道超车的技巧！</subtitle>
   <link href="/atom.xml" rel="self"/>
@@ -10,7 +10,7 @@
   <id>http://goukan.me/</id>
   
   <author>
-    <name>Goukang</name>
+    <name>Goukan</name>
     
   </author>
   
