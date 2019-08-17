@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.Quick StartCreate a new post1$ hexo new "My New Post"More info: WritingRun server1$ hexo serverMore info: ServerGenerate static files1$ hexo generateMore info: GeneratingDeploy to remote sites1$ hexo deployMore info: Deployment]]></content>
-  </entry>
-  <entry>
     <title><![CDATA[Spring AOP]]></title>
     <url>%2FSpring-AOP%2F</url>
     <content type="text"><![CDATA[现在在学习Spring，然后认为AOP思想挺重要的就写一篇博客来巩固一下自己所学的知识，也是我第一篇博客的开头吧！AOP:面向切面编程面向切面编程，他是一个使用JDK/Cglib反向代理机制实现的AOP不是框架，而是一种编译思想首先先引入jar：123456789101112131415&lt;dependency&gt; &lt;groupId&gt;org.springframework&lt;/groupId&gt; &lt;artifactId&gt;spring-aspects&lt;/artifactId&gt; &lt;version&gt;4.2.4.RELEASE&lt;/version&gt;&lt;/dependency&gt;&lt;dependency&gt; &lt;groupId&gt;org.aspectj&lt;/groupId&gt; &lt;artifactId&gt;aspectjrt&lt;/artifactId&gt; &lt;version&gt;1.8.7&lt;/version&gt;&lt;/dependency&gt;&lt;dependency&gt; &lt;groupId&gt;cglib&lt;/groupId&gt; &lt;artifactId&gt;cglib&lt;/artifactId&gt; &lt;version&gt;2.1_3&lt;/version&gt;&lt;/dependency&gt;定义一个切面类：@Component //纳入IOC容器管理@Aspect 申明一个切面类定义切点第9行代码中：//execution 代表切面表达式执行//第一个 * 表示需要切入的方法的返回值类型为所有，也可以使用String，int等类型//后面的 * 为通配符，可以代表任何的类，包名//最后一个 * 表示任何方法都被切入（log*表示 login与logout都会被切入，admin就不会被切入）//括号里面的 .. 为任何变量参数12345678910例如目录为.├── com| └── service| └── impl| ├── login| └── logout@Pointcut(value=&quot;execution (* com.service.impl. * .log * (..))&quot;) public void pointCut() &#123;&#125;@Before //前置通知，在切入方法之前执行12@Before(&quot;pointCut()&quot;)public void doBefore()&#123;&#125;@After 最终通知，在方法最后一行代码执行完之后执行12@After(&quot;pointCut()&quot;)public void doAfter(joinpoint joinpoint)&#123;&#125;@AfterReturning //后置通知。在方法返回值之后执行，一般用于对结果进行额外操作12@AfterReturning(&quot;pointCut()&quot;)public void doAfterReturning()&#123;&#125;@AfterThrowing //例外通知，只有发生异常时才会运行12@AfterThrowing(&quot;pointCut&quot;)public void doAfterThrowing()&#123;&#125;@Around 环绕通知，在方法执行之前进入，通过控制proceed方法执行业务bean方法，然后再退出12@Around(&quot;pointCut&quot;)public void doAround(ProceedingJoinPoint joinpoint)&#123;&#125;最后还做了个图]]></content>
+      <tags>
+        <tag>Spring</tag>
+        <tag>学习</tag>
+      </tags>
   </entry>
 </search>
