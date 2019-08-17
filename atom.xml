@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hi,goukang</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://goukan.me/"/>
+  <updated>2019-08-17T11:07:54.418Z</updated>
+  <id>http://goukan.me/</id>
+  
+  <author>
+    <name>John Doe</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://goukan.me/hello-world/"/>
+    <id>http://goukan.me/hello-world/</id>
+    <published>2019-08-17T11:16:56.870Z</published>
+    <updated>2019-08-17T11:07:54.418Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Spring AOP</title>
+    <link href="http://goukan.me/Spring-AOP/"/>
+    <id>http://goukan.me/Spring-AOP/</id>
+    <published>2019-08-17T09:37:05.000Z</published>
+    <updated>2019-08-17T12:57:19.341Z</updated>
+    
+    <content type="html"><![CDATA[<p>现在在学习Spring，然后认为AOP思想挺重要的就写一篇博客来巩固一下自己所学的知识，也是我第一篇博客的开头吧！</p><p><strong>AOP:面向切面编程</strong><br><strong>面向切面编程，他是一个使用JDK/Cglib反向代理机制实现的</strong><br><strong>AOP不是框架，而是一种编译思想</strong></p><p>首先先引入jar：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-aspects&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;4.2.4.RELEASE&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.aspectj&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;aspectjrt&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;1.8.7&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">&lt;groupId&gt;cglib&lt;/groupId&gt;</span><br><span class="line">&lt;artifactId&gt;cglib&lt;/artifactId&gt;</span><br><span class="line">&lt;version&gt;2.1_3&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure><p>定义一个切面类：</p><h4 id="Component-纳入IOC容器管理"><a href="#Component-纳入IOC容器管理" class="headerlink" title="@Component    //纳入IOC容器管理"></a>@Component //纳入IOC容器管理</h4><h4 id="Aspect-申明一个切面类"><a href="#Aspect-申明一个切面类" class="headerlink" title="@Aspect    申明一个切面类"></a>@Aspect 申明一个切面类</h4><p>定义切点</p><p>第9行代码中：</p><p>//<strong>execution</strong> 代表切面表达式执行</p><p>//第一个 * 表示需要切入的方法的返回值类型为所有，也可以使用String，int等类型</p><p>//后面的 * 为通配符，可以代表任何的类，包名</p><p>//最后一个 * 表示任何方法都被切入（log*表示 login与logout都会被切入，admin就不会被切入）</p><p>//括号里面的 <strong>..</strong> 为任何变量参数</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">例如目录为</span><br><span class="line">.</span><br><span class="line">├── com</span><br><span class="line">|   └── service</span><br><span class="line">|        └── impl</span><br><span class="line">|             ├── login</span><br><span class="line">|             └── logout</span><br><span class="line"></span><br><span class="line">@Pointcut(value=&quot;execution (* com.service.impl. * .log * (..))&quot;)</span><br><span class="line">public void pointCut() &#123;&#125;</span><br></pre></td></tr></table></figure><h4 id="Before-前置通知，在切入方法之前执行"><a href="#Before-前置通知，在切入方法之前执行" class="headerlink" title="@Before    //前置通知，在切入方法之前执行"></a>@Before //前置通知，在切入方法之前执行</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@Before(&quot;pointCut()&quot;)</span><br><span class="line">public void doBefore()&#123;&#125;</span><br></pre></td></tr></table></figure><h4 id="After-最终通知，在方法最后一行代码执行完之后执行"><a href="#After-最终通知，在方法最后一行代码执行完之后执行" class="headerlink" title="@After    最终通知，在方法最后一行代码执行完之后执行"></a>@After 最终通知，在方法最后一行代码执行完之后执行</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@After(&quot;pointCut()&quot;)</span><br><span class="line">public void doAfter(joinpoint joinpoint)&#123;&#125;</span><br></pre></td></tr></table></figure><h4 id="AfterReturning-后置通知。在方法返回值之后执行，一般用于对结果进行额外操作"><a href="#AfterReturning-后置通知。在方法返回值之后执行，一般用于对结果进行额外操作" class="headerlink" title="@AfterReturning    //后置通知。在方法返回值之后执行，一般用于对结果进行额外操作"></a>@AfterReturning //后置通知。在方法返回值之后执行，一般用于对结果进行额外操作</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@AfterReturning(&quot;pointCut()&quot;)</span><br><span class="line">public void doAfterReturning()&#123;&#125;</span><br></pre></td></tr></table></figure><h4 id="AfterThrowing-例外通知，只有发生异常时才会运行"><a href="#AfterThrowing-例外通知，只有发生异常时才会运行" class="headerlink" title="@AfterThrowing    //例外通知，只有发生异常时才会运行"></a>@AfterThrowing //例外通知，只有发生异常时才会运行</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@AfterThrowing(&quot;pointCut&quot;)</span><br><span class="line">public void doAfterThrowing()&#123;&#125;</span><br></pre></td></tr></table></figure><h4 id="Around-环绕通知，在方法执行之前进入，通过控制proceed方法执行业务bean方法，然后再退出"><a href="#Around-环绕通知，在方法执行之前进入，通过控制proceed方法执行业务bean方法，然后再退出" class="headerlink" title="@Around 环绕通知，在方法执行之前进入，通过控制proceed方法执行业务bean方法，然后再退出"></a>@Around 环绕通知，在方法执行之前进入，通过控制proceed方法执行业务bean方法，然后再退出</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@Around(&quot;pointCut&quot;)</span><br><span class="line">public void doAround(ProceedingJoinPoint joinpoint)&#123;&#125;</span><br></pre></td></tr></table></figure><p>最后还做了个图</p><figure class="image-bubble"><div class="img-lightbox"><div class="overlay"></div><img src="/images/AOP例图.jpg" alt></div><div class="image-caption"></div></figure><p></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;现在在学习Spring，然后认为AOP思想挺重要的就写一篇博客来巩固一下自己所学的知识，也是我第一篇博客的开头吧！&lt;/p&gt;&lt;p&gt;&lt;strong&gt;AOP:面向切面编程&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;面向切面编程，他是一个使用JDK/Cglib反向代理机制实现的&lt;/s
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
