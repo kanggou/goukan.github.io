@@ -1,1 +1,3 @@
-goukan.github.io
+# goukan.me
+
+> My lovely blog
