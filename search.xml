@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[校园网无法打开正常部分网站]]></title>
+    <url>%2F%E6%A0%A1%E5%9B%AD%E7%BD%91%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80%E6%AD%A3%E5%B8%B8%E9%83%A8%E5%88%86%E7%BD%91%E7%AB%99%2F</url>
+    <content type="text"><![CDATA[背景刚来到新校区，一开始想利用UPD53端口来偷渡上网的，奈何技术太差，校园网安全太强，只能妥协花了230大洋办理了校园网，一开始使用就发现部分网站打开速度过慢，但是没有在意，直到我打开某直播网站，发现无法访问ip服务器了自觉告诉我是DNS问题，所以我一开DNS服务器地址202.96.128.86和202.96.128.166校园网的dns1.用Vpn开全局代理能连吗？开pac代理能打开吗？开全局代理能打开，开pac代理不能打开。2.分别通过Ip地址和域名访问ip地址访问成功，网址访问失败。（问题一定出在DNS）3.nslookup www.douyu.com超时。（现有DNS没有在干活）4.ping 8.8.8.8ping通。（DNS服务器连通性没有问题）猜想与总结校园网可能都存在问题。电脑可以访问互联网，同时8.8.8.8可以ping通，但仍然出现典型的DNS问题。我猜测校园网分配的DNS服务器地址有问题。解决方案手动添加DNS服务器地址，如8.8.8.8和114.114.114.114打开网页成功。为了排除“自动获取导致故障”的可能性，手动添加了202.96.128.86这个地址作为DNS服务器地址。打开网页失败说明校园网自动获取的DNS服务器地址有些问题换一个DNS服务器地址就可以了]]></content>
+      <tags>
+        <tag>吐槽</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Spring AOP]]></title>
     <url>%2FSpring-AOP%2F</url>
     <content type="text"><![CDATA[现在在学习Spring，然后认为AOP思想挺重要的就写一篇博客来巩固一下自己所学的知识，也是我第一篇博客的开头吧！AOP:面向切面编程面向切面编程，他是一个使用JDK/Cglib反向代理机制实现的AOP不是框架，而是一种编译思想首先先引入jar：123456789101112131415&lt;dependency&gt; &lt;groupId&gt;org.springframework&lt;/groupId&gt; &lt;artifactId&gt;spring-aspects&lt;/artifactId&gt; &lt;version&gt;4.2.4.RELEASE&lt;/version&gt;&lt;/dependency&gt;&lt;dependency&gt; &lt;groupId&gt;org.aspectj&lt;/groupId&gt; &lt;artifactId&gt;aspectjrt&lt;/artifactId&gt; &lt;version&gt;1.8.7&lt;/version&gt;&lt;/dependency&gt;&lt;dependency&gt; &lt;groupId&gt;cglib&lt;/groupId&gt; &lt;artifactId&gt;cglib&lt;/artifactId&gt; &lt;version&gt;2.1_3&lt;/version&gt;&lt;/dependency&gt;定义一个切面类：@Component //纳入IOC容器管理@Aspect 申明一个切面类定义切点第9行代码中：//execution 代表切面表达式执行//第一个 * 表示需要切入的方法的返回值类型为所有，也可以使用String，int等类型//后面的 * 为通配符，可以代表任何的类，包名//最后一个 * 表示任何方法都被切入（log*表示 login与logout都会被切入，admin就不会被切入）//括号里面的 .. 为任何变量参数12345678910例如目录为.├── com| └── service| └── impl| ├── login| └── logout@Pointcut(value=&quot;execution (* com.service.impl. * .log * (..))&quot;) public void pointCut() &#123;&#125;@Before //前置通知，在切入方法之前执行12@Before(&quot;pointCut()&quot;)public void doBefore()&#123;&#125;@After 最终通知，在方法最后一行代码执行完之后执行12@After(&quot;pointCut()&quot;)public void doAfter(joinpoint joinpoint)&#123;&#125;@AfterReturning //后置通知。在方法返回值之后执行，一般用于对结果进行额外操作12@AfterReturning(&quot;pointCut()&quot;)public void doAfterReturning()&#123;&#125;@AfterThrowing //例外通知，只有发生异常时才会运行12@AfterThrowing(&quot;pointCut&quot;)public void doAfterThrowing()&#123;&#125;@Around 环绕通知，在方法执行之前进入，通过控制proceed方法执行业务bean方法，然后再退出12@Around(&quot;pointCut&quot;)public void doAround(ProceedingJoinPoint joinpoint)&#123;&#125;最后还做了个图]]></content>
